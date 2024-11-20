@@ -976,6 +976,28 @@ pub fn patterns() -> Vec<signatures::common::Signature> {
             description: signatures::csman::DESCRIPTION.to_string(),
             extractor: Some(extractors::csman::csman_extractor()),
         },
+        // TrueType font
+        signatures::common::Signature {
+            name: "ttf".to_string(),
+            short: false,
+            magic_offset: 0,
+            always_display: false,
+            magic: signatures::ttf::ttf_magic(),
+            parser: signatures::ttf::ttf_parser,
+            description: signatures::ttf::DESCRIPTION.to_string(),
+            extractor: None,
+        },
+        // OpenType font
+        signatures::common::Signature {
+            name: "otf".to_string(),
+            short: false,
+            magic_offset: 0,
+            always_display: false,
+            magic: signatures::otf::otf_magic(),
+            parser: signatures::otf::otf_parser,
+            description: signatures::otf::DESCRIPTION.to_string(),
+            extractor: None,
+        },
     ];
 
     binary_signatures

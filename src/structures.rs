@@ -146,6 +146,7 @@ pub mod squashfs;
 pub mod svg;
 pub mod tplink;
 pub mod trx;
+pub mod ttf;
 pub mod ubi;
 pub mod uefi;
 pub mod uimage;
